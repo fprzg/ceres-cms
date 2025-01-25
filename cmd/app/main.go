@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"cerescms.net/internal/controllers"
+	"cerescms.hapaxredux.net/internal/controllers"
 )
 
 func main() {
 	fmt.Println("Server is running on http://localhost:4000")
-	http.ListenAndServe(":4000", controllers.Router())
+	router := controllers.Router()
+	http.ListenAndServe(":4000", router)
 }

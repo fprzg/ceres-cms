@@ -2,13 +2,14 @@ package views
 
 import (
 	"bytes"
+	"fmt"
 	"io/fs"
 	"net/http"
 	"path/filepath"
 	"text/template"
 	"time"
 
-	"cerescms.net/ui"
+	"cerescms.hapaxredux.net/ui"
 )
 
 func readableDate() int {
@@ -75,12 +76,10 @@ func NewTemplateHydr(r *http.Request) *TemplateHydr {
 	return td
 }
 
-func (mgr *TemplateMgr) RenderView(w http.ResponseWriter, status int, page string, data *TemplateHydr) {
+func (mgr *TemplateMgr) HydrTemplate(page string, data *TemplateHydr) *bytes.Buffer {
 	ts, ok := mgr.cache[page]
 	if !ok {
-		//err := fmt.Errorf("the template '%s' does not exist", page)
-		//log(err)
-		return
+		panic(fmt.Errorf("template '%s' does not exist", page))
 	}
 
 	buff := new(bytes.Buffer)
@@ -89,6 +88,12 @@ func (mgr *TemplateMgr) RenderView(w http.ResponseWriter, status int, page strin
 	if err != nil {
 		panic(err)
 	}
+
+	return buff
+}
+
+func (mgr *TemplateMgr) RenderView(w http.ResponseWriter, status int, page string, data *TemplateHydr) {
+	buff := mgr.HydrTemplate(page, data)
 
 	w.WriteHeader(status)
 	buff.WriteTo(w)
