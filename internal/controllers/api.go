@@ -12,10 +12,11 @@ import (
 )
 
 func apiRoutes(r chi.Router) {
-	r.Get("/res/{projectID}/*", getResource)
+	r.Get("/res/{projectID}/*", readResource)
+	r.Post("/res/{projectID}/*", updateResource)
 }
 
-func getResource(w http.ResponseWriter, r *http.Request) {
+func readResource(w http.ResponseWriter, r *http.Request) {
 	//projectID := chi.URLParam(r, "projectID")
 	resourceID := chi.URLParam(r, "*")
 
@@ -37,12 +38,21 @@ func getResource(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
 
-	yp := services.YamlParser{}
-
-	asJson, err := yp.ToJSON(buff)
+	var ser services.JsonSer
+	asJson, err := ser.FromYaml(buff)
 	if err != nil {
 		panic(err)
 	}
 
 	fmt.Fprintf(w, "%s", asJson)
+}
+
+func updateResource(w http.ResponseWriter, r *http.Request) {
+	var ser services.JsonSer
+	asJson, err := ser.FromRequest(r)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("%q", string(asJson))
 }

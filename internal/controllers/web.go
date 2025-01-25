@@ -12,28 +12,36 @@ var (
 )
 
 func webRoutes(r chi.Router) {
-	r.Get("/", pageIndex)
-	r.Get("/signup", pageSignup)
-	r.Get("/login", pageLogin)
-	r.Get("/logout", pageLogout)
+	r.Get("/", index)
+	r.Route("/users", func(r chi.Router) {
+		r.Get("/signup", userSignup)
+		r.Get("/login", userLogin)
+		r.Get("/logout", userLogout)
+	})
+	r.Get("/dashboard", pageDashboard)
 }
 
-func pageIndex(w http.ResponseWriter, r *http.Request) {
+func index(w http.ResponseWriter, r *http.Request) {
 	data := views.NewTemplateHydr(r)
 	tmplMgr.RenderView(w, http.StatusOK, "home.tmpl.html", data)
 }
 
-func pageSignup(w http.ResponseWriter, r *http.Request) {
+func userSignup(w http.ResponseWriter, r *http.Request) {
 	data := views.NewTemplateHydr(r)
 	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
-func pageLogin(w http.ResponseWriter, r *http.Request) {
+func userLogin(w http.ResponseWriter, r *http.Request) {
 	data := views.NewTemplateHydr(r)
 	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
-func pageLogout(w http.ResponseWriter, r *http.Request) {
+func userLogout(w http.ResponseWriter, r *http.Request) {
 	data := views.NewTemplateHydr(r)
 	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
+}
+
+func pageDashboard(w http.ResponseWriter, r *http.Request) {
+	data := views.NewTemplateHydr(r)
+	tmplMgr.RenderView(w, http.StatusOK, "dashboard.tmpl.html", data)
 }
