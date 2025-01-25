@@ -1,4 +1,4 @@
 .vscode
 .envrc
-node_modules
+**/*.swp
 **/node_modules/
