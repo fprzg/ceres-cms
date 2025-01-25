@@ -1,10 +1,14 @@
 package controllers
 
 import (
-	"fmt"
 	"net/http"
 
+	"cerescms.net/internal/views"
 	"github.com/julienschmidt/httprouter"
+)
+
+var (
+	tmplMgr = views.NewTemplateMgr()
 )
 
 func Router() *httprouter.Router {
@@ -19,17 +23,21 @@ func Router() *httprouter.Router {
 }
 
 func pageIndex(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprintf(w, "index page")
+	data := views.NewTemplateHydr(r)
+	tmplMgr.RenderView(w, http.StatusOK, "home.tmpl.html", data)
 }
 
 func pageSignup(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprintf(w, "signup page")
+	data := views.NewTemplateHydr(r)
+	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
 func pageLogin(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprintf(w, "login page")
+	data := views.NewTemplateHydr(r)
+	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
 func pageLogout(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprintf(w, "logout page")
+	data := views.NewTemplateHydr(r)
+	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
 }

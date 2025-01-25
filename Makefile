@@ -10,3 +10,7 @@ help:
 confirm: 
 	@echo -n 'Are you sure? [y/N] ' && read ans && [ $${ans:-N} = y ]
 
+## app/run: Run the app
+.PHONY: app/run
+app/run: 
+	go run ./cmd/app

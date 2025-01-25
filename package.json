@@ -4,12 +4,21 @@
   "description": "Simple CMS with i18n support",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tailwind -i ./ui/tailwind/src/input.css -o ./ui/tailwind/dist/output.css",
+    "watch": "tailwind -i ./ui/tailwind/src/input.css -o ./ui/tailwind/dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fprzg/ceres-cms.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^4.0.0"
+  "bugs": {
+    "url": "https://github.com/fprzg/ceres-cms/issues"
+  },
+  "homepage": "https://github.com/fprzg/ceres-cms#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
   }
 }

@@ -1,2 +1,2 @@
-# ceres-cms
-Simple CMS with i18n support
+# Ceres CMS
+Minimal CMS with i18n and multi-project support.

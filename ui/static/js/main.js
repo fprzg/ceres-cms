@@ -1,0 +1,1 @@
+console.log("the static file server works!!!");

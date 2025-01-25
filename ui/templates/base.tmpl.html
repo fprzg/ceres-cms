@@ -1,0 +1,30 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{{ template "title" }} - Ceres CMS</title>
+
+        <!-- REMIXICON CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+    </head>
+    <body>
+
+        <main>
+            {{ with .Flash }}
+            <div class="flash">{{.}}</div>
+            {{ end}}
+
+            {{ template "main" . }}
+
+        </main>
+
+        <footer class="footer"></footer>
+
+        <script src="/static/js/main.js">
+        </script>
+    </body>
+</html>
+{{ end }}
