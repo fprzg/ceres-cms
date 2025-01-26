@@ -1,0 +1,130 @@
+html:
+  lang: "en"
+head:
+  title: "Home Page"
+nav:
+  title: "Pages"
+  list:
+    - name: "Home"
+      url: "/"
+    - name: "About"
+      url: "/about"
+    - name: "Testimonials"
+      url: "/testimonials"
+    - name: "Our Work"
+      url: "/porfolio"
+    - name: "News"
+      url: "/news"
+    - name: "Contact"
+      url: "/contact"
+hero:
+  title: "Let you home be unique"
+  paragraph: "There are many variations of the passages of lorem Ipsum from available,variations of the passages."
+  btn: "Get free estimation"
+steps:
+  - icon: "ri-compasses-2-line"
+    title: "Project Planning"
+    paragraph: "There are many variations of the passages of lorem Ipsum from available,variations of the passages."
+  - icon: "ri-magic-line"
+    title: "Gaining Materials"
+    paragraph: "There are many variations of the passages of lorem Ipsum from available,variations of the passages."
+  - icon: "ri-tools-line"
+    title: "Gaining Materials"
+    paragraph: "There are many variations of the passages of lorem Ipsum from available,variations of the passages."
+about:
+  title: "We Create The Art Of Stylish Living Stylishly"
+  paragraph: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal."
+  call_us: "Call Us Anytime"
+testimonials:
+  what_clients_say: "What clients say:"
+  list:
+    - img: "/static/assets/testimonial/01.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been."
+    - img: "/static/assets/testimonial/02.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been."
+    - img: "/static/assets/testimonial/03.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been."
+brands:
+  - src: "/static/assets/brands/01.svg"
+  - src: "/static/assets/brands/02.svg"
+  - src: "/static/assets/brands/03.svg"
+  - src: "/static/assets/brands/04.svg"
+  - src: "/static/assets/brands/05.svg"
+projects:
+  text:
+    title: "Follow Our Projects"
+    paragraph: "It is a long established fact that a reader will be distracted by the of readable content of page lookings at its layouts points."
+  list:
+    - name: "Modern Kitchen"
+      desc: "Decor/Architecture"
+      img: "/static/assets/work/01.png"
+    - name: "Modern Kitchen"
+      desc: "Decor/Architecture"
+      img: "/static/assets/work/02.png"
+    - name: "Modern Kitchen"
+      desc: "Decor/Architecture"
+      img: "/static/assets/work/03.png"
+    - name: "Modern Kitchen"
+      desc: "Decor/Architecture"
+      img: "/static/assets/work/04.png"
+stats:
+  years_of_experience:
+    name: "Years Of Experience"
+    desc: "12"
+  projects_completed:
+    name: "Projects Completed"
+    desc: "85"
+  active_projects:
+    name: "Active Projects"
+    desc: "15"
+  happy_customers:
+    name: "Happy Customers"
+    desc: "95"
+news:
+  title: "Articles & News"
+  paragraph: "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using."
+  list:
+    - img: "/static/assets/news/01.png"
+      title: "Let's Get Solution For Building Construction Work"
+      date: "22 June, 2024"
+    - img: "/static/assets/news/02.png"
+      title: "Let's Get Solution For Building Construction Work"
+      date: "22 June, 2024"
+    - img: "/static/assets/news/03.png"
+      title: "Let's Get Solution For Building Construction Work"
+      date: "22 June, 2024"
+cta:
+  title: "Do you want to join Interno?"
+  desc: "It is a long established fact that a reader will be distracted lookings."
+  btn: "Connect with us"
+services:
+  title: "Services"
+  list:
+    - name: "Kitchen"
+      url: "/"
+    - name: "Living Area"
+      url: "/"
+    - name: "Bathroom"
+      url: "/"
+    - name: "Bedroom"
+      url: "/"
+slogan: "It is a long established fact that a reader will be distracted lookings."
+socials:
+  - icon: "ri-facebook-fill"
+    url: "https://facebook.com"
+  - icon: "ri-twitter-fill"
+    url: "https://twitter.com"
+  - icon: "ri-instagram-fill"
+    url: "https://instagram.com"
+contact:
+  title: "Contact"
+  address: "55 East Birchwoord Ave. Brooklyn, New York 11201"
+  email: "contact@interno.com"
+  phone: "(123) 456 - 7890"
+copyright: "Copyright &copy; Interno 2025. All rights reserved."

@@ -1,0 +1,130 @@
+html:
+  lang: "en"
+head:
+  title: "Página de Inicio"
+nav:
+  title: "Páginas"
+  list:
+    - name: "Inicio"
+      url: "/"
+    - name: "Acerca de"
+      url: "/about"
+    - name: "Testimonios"
+      url: "/testimonials"
+    - name: "Nuestro Trabajo"
+      url: "/porfolio"
+    - name: "Noticias"
+      url: "/news"
+    - name: "Contacto"
+      url: "/contact"
+hero:
+  title: "Haz que tu hogar sea único"
+  paragraph: "Hay muchas variaciones de los pasajes de lorem Ipsum disponibles, variaciones de los pasajes."
+  btn: "Obtén una estimación gratis"
+steps:
+  - icon: "ri-compasses-2-line"
+    title: "Planificación del Proyecto"
+    paragraph: "Hay muchas variaciones de los pasajes de lorem Ipsum disponibles, variaciones de los pasajes."
+  - icon: "ri-magic-line"
+    title: "Obtención de Materiales"
+    paragraph: "Hay muchas variaciones de los pasajes de lorem Ipsum disponibles, variaciones de los pasajes."
+  - icon: "ri-tools-line"
+    title: "Obtención de Materiales"
+    paragraph: "Hay muchas variaciones de los pasajes de lorem Ipsum disponibles, variaciones de los pasajes."
+about:
+  title: "Creamos el Arte de Vivir con Estilo"
+  paragraph: "Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire sus diseños, los puntos de uso que tiene son más o menos normales."
+  call_us: "Llámarnos en cualquier momento"
+testimonials:
+  what_clients_say: "Lo que dicen los clientes:"
+  list:
+    - img: "/static/assets/testimonial/01.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum es simplemente un texto ficticio de la industria de la composición tipográfica. Ipsum ha sido."
+    - img: "/static/assets/testimonial/02.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum es simplemente un texto ficticio de la industria de la composición tipográfica. Ipsum ha sido."
+    - img: "/static/assets/testimonial/03.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum es simplemente un texto ficticio de la industria de la composición tipográfica. Ipsum ha sido."
+brands:
+  - src: "/static/assets/brands/01.svg"
+  - src: "/static/assets/brands/02.svg"
+  - src: "/static/assets/brands/03.svg"
+  - src: "/static/assets/brands/04.svg"
+  - src: "/static/assets/brands/05.svg"
+projects:
+  text:
+    title: "Sigue Nuestros Proyectos"
+    paragraph: "Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire sus diseños, los puntos de uso que tiene son más o menos normales."
+  list:
+    - name: "Cocina Moderna"
+      desc: "Decoración/Arquitectura"
+      img: "/static/assets/work/01.png"
+    - name: "Cocina Moderna"
+      desc: "Decoración/Arquitectura"
+      img: "/static/assets/work/02.png"
+    - name: "Cocina Moderna"
+      desc: "Decoración/Arquitectura"
+      img: "/static/assets/work/03.png"
+    - name: "Cocina Moderna"
+      desc: "Decoración/Arquitectura"
+      img: "/static/assets/work/04.png"
+stats:
+  years_of_experience:
+    name: "Años de Experiencia"
+    desc: "12"
+  projects_completed:
+    name: "Proyectos Completados"
+    desc: "85"
+  active_projects:
+    name: "Proyectos Activos"
+    desc: "15"
+  happy_customers:
+    name: "Clientes Felices"
+    desc: "95"
+news:
+  title: "Artículos y Noticias"
+  paragraph: "Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire sus diseños, los puntos de uso que tiene son más o menos normales."
+  list:
+    - img: "/static/assets/news/01.png"
+      title: "Encontremos una Solución para la Construcción de Edificios"
+      date: "22 de junio de 2024"
+    - img: "/static/assets/news/02.png"
+      title: "Encontremos una Solución para la Construcción de Edificios"
+      date: "22 de junio de 2024"
+    - img: "/static/assets/news/03.png"
+      title: "Encontremos una Solución para la Construcción de Edificios"
+      date: "22 de junio de 2024"
+cta:
+  title: "¿Quieres unirte a Interno?"
+  desc: "Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire sus diseños."
+  btn: "Conéctate con nosotros"
+services:
+  title: "Servicios"
+  list:
+    - name: "Cocina"
+      url: "/"
+    - name: "Sala de Estar"
+      url: "/"
+    - name: "Baño"
+      url: "/"
+    - name: "Dormitorio"
+      url: "/"
+slogan: "Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire sus diseños."
+socials:
+  - icon: "ri-facebook-fill"
+    url: "https://facebook.com"
+  - icon: "ri-twitter-fill"
+    url: "https://twitter.com"
+  - icon: "ri-instagram-fill"
+    url: "https://instagram.com"
+contact:
+  title: "Contacto"
+  address: "55 East Birchwoord Ave. Brooklyn, Nueva York 11201"
+  email: "contact@interno.com"
+  phone: "(123) 456 - 7890"
+copyright: "Derechos de autor &copy; Interno 2025. Todos los derechos reservados."

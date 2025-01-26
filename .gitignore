@@ -1,4 +1,5 @@
-.vscode
 .envrc
+
 **/*.swp
 **/node_modules/
+**/.vscode/

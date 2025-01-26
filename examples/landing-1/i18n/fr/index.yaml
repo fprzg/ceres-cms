@@ -1,0 +1,130 @@
+html:
+  lang: "en"
+head:
+  title: "Page d'Accueil"
+nav:
+  title: "Pages"
+  list:
+    - name: "Accueil"
+      url: "/"
+    - name: "À propos"
+      url: "/about"
+    - name: "Témoignages"
+      url: "/testimonials"
+    - name: "Nos Réalisations"
+      url: "/porfolio"
+    - name: "Actualités"
+      url: "/news"
+    - name: "Contact"
+      url: "/contact"
+hero:
+  title: "Faites de votre maison un lieu unique"
+  paragraph: "Il existe de nombreuses variations des passages de lorem Ipsum disponibles, des variations des passages."
+  btn: "Obtenez une estimation gratuite"
+steps:
+  - icon: "ri-compasses-2-line"
+    title: "Planification de Projet"
+    paragraph: "Il existe de nombreuses variations des passages de lorem Ipsum disponibles, des variations des passages."
+  - icon: "ri-magic-line"
+    title: "Acquisition des Matériaux"
+    paragraph: "Il existe de nombreuses variations des passages de lorem Ipsum disponibles, des variations des passages."
+  - icon: "ri-tools-line"
+    title: "Acquisition des Matériaux"
+    paragraph: "Il existe de nombreuses variations des passages de lorem Ipsum disponibles, des variations des passages."
+about:
+  title: "Nous Créons l'Art de Vivre avec Style"
+  paragraph: "Il est depuis longtemps établi qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page, les points d'utilisation sont plus ou moins normaux."
+  call_us: "Appelez-nous à tout moment"
+testimonials:
+  what_clients_say: "Ce que disent les clients :"
+  list:
+    - img: "/static/assets/testimonial/01.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum est simplement un texte factice de l'industrie de la composition. Ipsum a été."
+    - img: "/static/assets/testimonial/02.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum est simplement un texte factice de l'industrie de la composition. Ipsum a été."
+    - img: "/static/assets/testimonial/03.png"
+      name: "Nattasha Mith"
+      location: "Greenville, USA"
+      paragraph: "Lorem Ipsum est simplement un texte factice de l'industrie de la composition. Ipsum a été."
+brands:
+  - src: "/static/assets/brands/01.svg"
+  - src: "/static/assets/brands/02.svg"
+  - src: "/static/assets/brands/03.svg"
+  - src: "/static/assets/brands/04.svg"
+  - src: "/static/assets/brands/05.svg"
+projects:
+  text:
+    title: "Suivez Nos Projets"
+    paragraph: "Il est depuis longtemps établi qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page, les points d'utilisation sont plus ou moins normaux."
+  list:
+    - name: "Cuisine Moderne"
+      desc: "Décoration/Architecture"
+      img: "/static/assets/work/01.png"
+    - name: "Cuisine Moderne"
+      desc: "Décoration/Architecture"
+      img: "/static/assets/work/02.png"
+    - name: "Cuisine Moderne"
+      desc: "Décoration/Architecture"
+      img: "/static/assets/work/03.png"
+    - name: "Cuisine Moderne"
+      desc: "Décoration/Architecture"
+      img: "/static/assets/work/04.png"
+stats:
+  years_of_experience:
+    name: "Années d'Expérience"
+    desc: "12"
+  projects_completed:
+    name: "Projets Terminés"
+    desc: "85"
+  active_projects:
+    name: "Projets Actifs"
+    desc: "15"
+  happy_customers:
+    name: "Clients Satisfaits"
+    desc: "95"
+news:
+  title: "Articles & Actualités"
+  paragraph: "Il est depuis longtemps établi qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page, les points d'utilisation sont plus ou moins normaux."
+  list:
+    - img: "/static/assets/news/01.png"
+      title: "Trouvons une Solution pour les Travaux de Construction"
+      date: "22 juin 2024"
+    - img: "/static/assets/news/02.png"
+      title: "Trouvons une Solution pour les Travaux de Construction"
+      date: "22 juin 2024"
+    - img: "/static/assets/news/03.png"
+      title: "Trouvons une Solution pour les Travaux de Construction"
+      date: "22 juin 2024"
+cta:
+  title: "Voulez-vous rejoindre Interno ?"
+  desc: "Il est depuis longtemps établi qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page."
+  btn: "Contactez-nous"
+services:
+  title: "Services"
+  list:
+    - name: "Cuisine"
+      url: "/"
+    - name: "Salon"
+      url: "/"
+    - name: "Salle de Bain"
+      url: "/"
+    - name: "Chambre"
+      url: "/"
+slogan: "Il est depuis longtemps établi qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page."
+socials:
+  - icon: "ri-facebook-fill"
+    url: "https://facebook.com"
+  - icon: "ri-twitter-fill"
+    url: "https://twitter.com"
+  - icon: "ri-instagram-fill"
+    url: "https://instagram.com"
+contact:
+  title: "Contact"
+  address: "55 East Birchwoord Ave. Brooklyn, New York 11201"
+  email: "contact@interno.com"
+  phone: "(123) 456 - 7890"
+copyright: "Droits d'auteur &copy; Interno 2025. Tous droits réservés."

@@ -1,15 +1,17 @@
 {
-  "name": "landing-1",
+  "name": "tailwind-landing-page",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./css/input.css -o ./dist/output.css",
+    "watch": "npx tailwindcss -i ./css/input.css -o ./dist/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.17"
   }
 }

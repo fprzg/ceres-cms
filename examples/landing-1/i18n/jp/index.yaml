@@ -1,0 +1,128 @@
+head:
+  title: "ホームページ"
+nav:
+  title: "ページ"
+  list:
+    - name: "ホーム"
+      url: "/"
+    - name: "私たちについて"
+      url: "/about"
+    - name: "お客様の声"
+      url: "/testimonials"
+    - name: "私たちの仕事"
+      url: "/porfolio"
+    - name: "ニュース"
+      url: "/news"
+    - name: "お問い合わせ"
+      url: "/contact"
+hero:
+  title: "あなたの家をユニークに"
+  paragraph: "利用可能なローレム・イプサムのパッセージには多くのバリエーションがあります。"
+  btn: "無料見積もりを取得"
+steps:
+  - icon: "ri-compasses-2-line"
+    title: "プロジェクト計画"
+    paragraph: "利用可能なローレム・イプサムのパッセージには多くのバリエーションがあります。"
+  - icon: "ri-magic-line"
+    title: "材料の調達"
+    paragraph: "利用可能なローレム・イプサムのパッセージには多くのバリエーションがあります。"
+  - icon: "ri-tools-line"
+    title: "材料の調達"
+    paragraph: "利用可能なローレム・イプサムのパッセージには多くのバリエーションがあります。"
+about:
+  title: "私たちはスタイリッシュな生活の芸術を創造します"
+  paragraph: "長年確立された事実として、読者はレイアウトを見るときにページの読みやすいコンテンツに気を取られます。"
+  call_us: "いつでもお電話ください"
+testimonials:
+  what_clients_say: "お客様の声:"
+  list:
+    - img: "/static/assets/testimonial/01.png"
+      name: "ナターシャ・ミス"
+      location: "グリーンビル、アメリカ"
+      paragraph: "ローレム・イプサムは単なる印刷業界のダミーテキストです。イプサムは。"
+    - img: "/static/assets/testimonial/02.png"
+      name: "ナターシャ・ミス"
+      location: "グリーンビル、アメリカ"
+      paragraph: "ローレム・イプサムは単なる印刷業界のダミーテキストです。イプサムは。"
+    - img: "/static/assets/testimonial/03.png"
+      name: "ナターシャ・ミス"
+      location: "グリーンビル、アメリカ"
+      paragraph: "ローレム・イプサムは単なる印刷業界のダミーテキストです。イプサムは。"
+brands:
+  - src: "/static/assets/brands/01.svg"
+  - src: "/static/assets/brands/02.svg"
+  - src: "/static/assets/brands/03.svg"
+  - src: "/static/assets/brands/04.svg"
+  - src: "/static/assets/brands/05.svg"
+projects:
+  text:
+    title: "私たちのプロジェクトをフォロー"
+    paragraph: "長年確立された事実として、読者はレイアウトを見るときにページの読みやすいコンテンツに気を取られます。"
+  list:
+    - name: "モダンキッチン"
+      desc: "デコレーション/建築"
+      img: "/static/assets/work/01.png"
+    - name: "モダンキッチン"
+      desc: "デコレーション/建築"
+      img: "/static/assets/work/02.png"
+    - name: "モダンキッチン"
+      desc: "デコレーション/建築"
+      img: "/static/assets/work/03.png"
+    - name: "モダンキッチン"
+      desc: "デコレーション/建築"
+      img: "/static/assets/work/04.png"
+stats:
+  years_of_experience:
+    name: "経験年数"
+    desc: "12"
+  projects_completed:
+    name: "完了したプロジェクト"
+    desc: "85"
+  active_projects:
+    name: "進行中のプロジェクト"
+    desc: "15"
+  happy_customers:
+    name: "満足した顧客"
+    desc: "95"
+news:
+  title: "記事とニュース"
+  paragraph: "長年確立された事実として、読者はレイアウトを見るときにページの読みやすいコンテンツに気を取られます。"
+  list:
+    - img: "/static/assets/news/01.png"
+      title: "建築工事の解決策を見つけましょう"
+      date: "2024年6月22日"
+    - img: "/static/assets/news/02.png"
+      title: "建築工事の解決策を見つけましょう"
+      date: "2024年6月22日"
+    - img: "/static/assets/news/03.png"
+      title: "建築工事の解決策を見つけましょう"
+      date: "2024年6月22日"
+cta:
+  title: "Internoに参加しませんか？"
+  desc: "長年確立された事実として、読者はレイアウトを見るときにページの読みやすいコンテンツに気を取られます。"
+  btn: "お問い合わせ"
+services:
+  title: "サービス"
+  list:
+    - name: "キッチン"
+      url: "/"
+    - name: "リビングエリア"
+      url: "/"
+    - name: "バスルーム"
+      url: "/"
+    - name: "ベッドルーム"
+      url: "/"
+slogan: "長年確立された事実として、読者はレイアウトを見るときにページの読みやすいコンテンツに気を取られます。"
+socials:
+  - icon: "ri-facebook-fill"
+    url: "https://facebook.com"
+  - icon: "ri-twitter-fill"
+    url: "https://twitter.com"
+  - icon: "ri-instagram-fill"
+    url: "https://instagram.com"
+contact:
+  title: "お問い合わせ"
+  address: "55 East Birchwoord Ave. Brooklyn, New York 11201"
+  email: "contact@interno.com"
+  phone: "(123) 456 - 7890"
+copyright: "著作権 &copy; Interno 2025. 無断複写・転載を禁じます。"
