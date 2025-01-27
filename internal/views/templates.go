@@ -13,17 +13,83 @@ func readableDate() int {
 	return 666
 }
 
-type TemplateMgr struct {
+type TmplHydr struct {
+	I18n            map[string]interface{}
+	CurrentYear     int
+	Flash           string
+	IsAuthenticated bool
+	CSRFToken       string
+}
+
+func NewTmplHydr(r *http.Request) *TmplHydr {
+	td := &TmplHydr{
+		CurrentYear:     time.Now().Year(),
+		IsAuthenticated: false,
+		CSRFToken:       "none",
+	}
+
+	if r != nil {
+		td.Flash = ""
+		td.IsAuthenticated = false //app.isAuthenticated(r)
+	}
+
+	return td
+}
+
+type TmplEng interface {
+	Render(w http.ResponseWriter, status int, page string, data *TmplHydr)
+}
+
+type TmplEngOnDemand struct {
+	templateDir string
+	functions   template.FuncMap
+}
+
+func templateFunctions() template.FuncMap {
+	return template.FuncMap{
+		"readableDate": readableDate,
+	}
+}
+
+func NewTmplEngOnDemand(templateDir string) *TmplEngOnDemand {
+	return &TmplEngOnDemand{
+		templateDir: templateDir,
+		functions:   templateFunctions(),
+	}
+}
+
+func (e *TmplEngOnDemand) Render(w http.ResponseWriter, status int, page string, data *TmplHydr) error {
+	patterns := []string{
+		filepath.Join(e.templateDir, "base.tmpl.html"),
+		filepath.Join(e.templateDir, "partials/nav.tmpl.html"),
+		filepath.Join(e.templateDir, "pages", page),
+	}
+
+	ts, err := template.New(page).Funcs(e.functions).ParseFiles(patterns...)
+	if err != nil {
+		panic(err)
+	}
+
+	var buff bytes.Buffer
+	if err := ts.ExecuteTemplate(&buff, "base", data); err != nil {
+		return err
+	}
+
+	w.WriteHeader(status)
+	buff.WriteTo(w)
+
+	return nil
+}
+
+type TmplEngCache struct {
 	cache     map[string]*template.Template
 	functions template.FuncMap
 }
 
-func NewTemplateMgr(templateDir string) TemplateMgr {
-	mgr := TemplateMgr{
-		cache: map[string]*template.Template{},
-		functions: template.FuncMap{
-			"readableDate": readableDate,
-		},
+func NewTmplEngCache(templateDir string) TmplEngCache {
+	e := TmplEngCache{
+		cache:     map[string]*template.Template{},
+		functions: templateFunctions(),
 	}
 
 	pages, err := filepath.Glob(filepath.Join(templateDir, "pages/*.tmpl.html"))
@@ -40,59 +106,30 @@ func NewTemplateMgr(templateDir string) TemplateMgr {
 			page,
 		}
 
-		ts, err := template.New(name).Funcs(mgr.functions).ParseFiles(patterns...)
+		ts, err := template.New(name).Funcs(e.functions).ParseFiles(patterns...)
 		if err != nil {
 			panic(err)
 		}
 
-		mgr.cache[name] = ts
+		e.cache[name] = ts
 	}
 
-	return mgr
+	return e
 }
 
-type TemplateHydr struct {
-	I18n            map[string]interface{}
-	CurrentYear     int
-	Flash           string
-	IsAuthenticated bool
-	CSRFToken       string
-}
-
-func NewTemplateHydr(r *http.Request) *TemplateHydr {
-	td := &TemplateHydr{
-		CurrentYear:     time.Now().Year(),
-		IsAuthenticated: false,
-		CSRFToken:       "none",
+func (e *TmplEngCache) Render(w http.ResponseWriter, status int, page string, data *TmplHydr) error {
+	ts, err := e.cache[page]
+	if !err {
+		return fmt.Errorf("template not found")
 	}
 
-	if r != nil {
-		td.Flash = ""
-		td.IsAuthenticated = false //app.isAuthenticated(r)
+	var buff bytes.Buffer
+	if err := ts.ExecuteTemplate(&buff, "base", data); err != nil {
+		return err
 	}
-
-	return td
-}
-
-func (mgr *TemplateMgr) HydrTemplate(page string, data *TemplateHydr) *bytes.Buffer {
-	ts, ok := mgr.cache[page]
-	if !ok {
-		panic(fmt.Errorf("template '%s' does not exist", page))
-	}
-
-	buff := new(bytes.Buffer)
-
-	err := ts.ExecuteTemplate(buff, "base", data)
-	if err != nil {
-		panic(err)
-	}
-
-	return buff
-}
-
-func (mgr *TemplateMgr) RenderView(w http.ResponseWriter, status int, page string, data *TemplateHydr) {
-	buff := mgr.HydrTemplate(page, data)
 
 	w.WriteHeader(status)
 	buff.WriteTo(w)
+
+	return nil
 }

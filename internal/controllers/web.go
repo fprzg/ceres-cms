@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	tmplMgr = views.NewTemplateMgr("../../ui/templates")
+	tmplMgr = views.NewTmplEngOnDemand("../../ui/templates")
 )
 
 func webRoutes(r chi.Router) {
@@ -22,26 +22,26 @@ func webRoutes(r chi.Router) {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	data := views.NewTemplateHydr(r)
-	tmplMgr.RenderView(w, http.StatusOK, "home.tmpl.html", data)
+	data := views.NewTmplHydr(r)
+	tmplMgr.Render(w, http.StatusOK, "home.tmpl.html", data)
 }
 
 func userSignup(w http.ResponseWriter, r *http.Request) {
-	data := views.NewTemplateHydr(r)
-	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
+	data := views.NewTmplHydr(r)
+	tmplMgr.Render(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
 func userLogin(w http.ResponseWriter, r *http.Request) {
-	data := views.NewTemplateHydr(r)
-	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
+	data := views.NewTmplHydr(r)
+	tmplMgr.Render(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
 func userLogout(w http.ResponseWriter, r *http.Request) {
-	data := views.NewTemplateHydr(r)
-	tmplMgr.RenderView(w, http.StatusOK, "signup.tmpl.html", data)
+	data := views.NewTmplHydr(r)
+	tmplMgr.Render(w, http.StatusOK, "signup.tmpl.html", data)
 }
 
 func pageDashboard(w http.ResponseWriter, r *http.Request) {
-	data := views.NewTemplateHydr(r)
-	tmplMgr.RenderView(w, http.StatusOK, "dashboard.tmpl.html", data)
+	data := views.NewTmplHydr(r)
+	tmplMgr.Render(w, http.StatusOK, "dashboard.tmpl.html", data)
 }
