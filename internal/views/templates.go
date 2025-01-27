@@ -3,13 +3,10 @@ package views
 import (
 	"bytes"
 	"fmt"
-	"io/fs"
 	"net/http"
 	"path/filepath"
 	"text/template"
 	"time"
-
-	"cerescms.hapaxredux.net/ui"
 )
 
 func readableDate() int {
@@ -21,7 +18,7 @@ type TemplateMgr struct {
 	functions template.FuncMap
 }
 
-func NewTemplateMgr() TemplateMgr {
+func NewTemplateMgr(templateDir string) TemplateMgr {
 	mgr := TemplateMgr{
 		cache: map[string]*template.Template{},
 		functions: template.FuncMap{
@@ -29,7 +26,7 @@ func NewTemplateMgr() TemplateMgr {
 		},
 	}
 
-	pages, err := fs.Glob(ui.Files, "templates/pages/*.tmpl.html")
+	pages, err := filepath.Glob(filepath.Join(templateDir, "pages/*.tmpl.html"))
 	if err != nil {
 		panic(err)
 	}
@@ -38,12 +35,12 @@ func NewTemplateMgr() TemplateMgr {
 		name := filepath.Base(page)
 
 		patterns := []string{
-			"templates/base.tmpl.html",
-			"templates/partials/nav.tmpl.html",
+			filepath.Join(templateDir, "base.tmpl.html"),
+			filepath.Join(templateDir, "partials/nav.tmpl.html"),
 			page,
 		}
 
-		ts, err := template.New(name).Funcs(mgr.functions).ParseFS(ui.Files, patterns...)
+		ts, err := template.New(name).Funcs(mgr.functions).ParseFiles(patterns...)
 		if err != nil {
 			panic(err)
 		}
@@ -55,6 +52,7 @@ func NewTemplateMgr() TemplateMgr {
 }
 
 type TemplateHydr struct {
+	I18n            map[string]interface{}
 	CurrentYear     int
 	Flash           string
 	IsAuthenticated bool

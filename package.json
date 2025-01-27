@@ -4,8 +4,8 @@
   "description": "Simple CMS with i18n support",
   "main": "index.js",
   "scripts": {
-    "build": "tailwind -i ./ui/tailwind/src/input.css -o ./ui/tailwind/dist/output.css",
-    "watch": "tailwind -i ./ui/tailwind/src/input.css -o ./ui/tailwind/dist/output.css --watch"
+    "build": "tailwind -i ./ui/tailwind.src/input.css -o ./ui/static/css/tailwind.output.css",
+    "watch": "tailwind -i ./ui/tailwind.src/input.css -o ./ui/static/css/tailwind.output.css --watch"
   },
   "repository": {
     "type": "git",

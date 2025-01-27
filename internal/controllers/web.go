@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	tmplMgr = views.NewTemplateMgr()
+	tmplMgr = views.NewTemplateMgr("../../ui/templates")
 )
 
 func webRoutes(r chi.Router) {

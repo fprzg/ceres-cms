@@ -9,24 +9,28 @@
 
         <!-- REMIXICON CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+        <link rel="stylesheet" href="/static/css/tailwind.output.css">
 
-        <style>
-        body {
-            display: flex;
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
-        }
-        iframe {
-            border: none;
-            width: 50%;
-            height: 100%;
-        }
-        </style>
     </head>
     <body>
+        <header class="sticky bg-pink-300">
+            <nav>
+                <ul class="flex flex-col">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
+        <main>
             {{ template "main" . }}
+        </main>
+
+        <footer>
+            &copy; {{ .CurrentYear }} Hapax Redux
+        </footer>
     </body>
 </html>
 {{ end }}
